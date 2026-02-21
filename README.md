@@ -1,6 +1,8 @@
 # Pauline Ricaud
 3rd year student in computer science
 
+Itch.io : [My account](https://pauline-ricaud.itch.io/)
+
 ## Game Jam (teamworks)
 - Code Game Jam 2026, theme : ``Fête des clic''
   
