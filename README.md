@@ -7,7 +7,7 @@
   [Faut bûcher](https://pauline-ricaud.itch.io/faut-bucher)
 - Global Game Jam 2026, theme : ``Mask''
   
-  [Kasse au musée](https://pauline-ricaud.itch.io/kasse-au-musee)
+  [Kasse au musée](https://defeosimon.itch.io/kasse-au-musee)
 
 ## Mentorship program
 Mentorship program ``Develop at Ubisoft'' with Ubisoft Bordeaux Studio, 2025
