@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Pauline Ricaud</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="shortcut icon" href="icon.png"> -->
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+
+<h1>Pauline Ricaud</h1>
+    3rd year student in computer science.
+
+<div>
+    <div class="collapsible">
+        <button>-</button>
+        <h2>Studies projects</h2>
+    </div>
+
+    <div class="content">
+        <div>
+            <h3>NET Project</h3>
+            <p>Project created in 2nd year (L2) with Nicolas Lespinasse and Arthur Chaminade for our UE Projet Technologique. <br/>
+                You can try the original project (and not the embedded version) <a href="web/game.html">here</a>.</p>
+
+            <iframe src="web/game_embed.html" id="netGame">Page not found.</iframe>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="collapsible">
+        <button onclick="">-</button>
+        <h2>Game Jam</h2>
+    </div>
+    <div  class="content">
+        <div>
+            <h3>Global Game Jam 2026</h3>
+            <p>The theme for the Global Game Jam's 2026 edition : <b>Mask</b></p>
+            <p>
+                We decided to create a little game where the player want to break into a museum to steal jewels, concealing their identity with a mask. They have to break the glass containing the jewel thanks to a point-and-click mini-game, then desactivate the cameras in the security room before leaving the building.
+            </p>
+
+            <iframe frameborder="0" src="https://itch.io/embed/4256328?linkback=true&amp;border_width=2&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=8b008b&amp;border_color=9932cc" width="554" height="169"><a href="https://defeosimon.itch.io/kasse-au-musee">Kasse au musée by DeFeoSimon,, Pauline Ricaud, Lilian6447</a></iframe>
+        </div>
+        <div>
+            <h3>Code Game Jam 2026</h3>
+            <p>The theme for the Global Game Jam's 2026 edition : <b>Fête des clics !</b></p>
+
+            <p>The theme giving us a little space for inspiration, we decided to set our game in the context of a party, where one of the game available, the one we coded, was to put a nail in a log. The player has to click only when the cursor is at the right place, then click enough times so the nail goes into the log.</p>
+
+            <iframe frameborder="0" src="https://itch.io/embed/4224134?linkback=true&amp;border_width=5&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=8b008b&amp;border_color=9932cc" width="560" height="175"><a href="https://pauline-ricaud.itch.io/faut-bucher">Faut Bûcher ! by Pauline Ricaud, Lilian6447, cplcoincoin, DeFeoSimon,</a></iframe>
+
+
+        </div>
+    </div>
+</div>
+<div>
+    <div class="collapsible">
+        <button onclick="">-</button>
+        <h2>Mentoring</h2>
+    </div>
+    <div class="content">
+        <h3>Ubisoft</h3>
+        <p>
+        Develop at Ubisoft is a mentorship program for students and recent graduates (with less than two years of experience) looking to grow their skills in Game Design, Audio, or Programming.<br>
+
+        I applied to this program for the 2024-2025 program and was accepted. The game below was my first little game, done before any Game Jam, thanks to the help of my Ubisoft's mentor.<br>
+        <br>
+        I prioritized the process of learning how to program things over the finished product, so the game design lacks and it's not playable in this state, but I will resume the programming of this game to enhance it later.
+        </p>
+
+        <iframe frameborder="0" src="https://itch.io/embed/3251520?linkback=true&amp;border_width=5&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=8b008b&amp;border_color=9932cc" width="560" height="175"><a href="https://pauline-ricaud.itch.io/lethalexposure">Lethal Exposure by Pauline Ricaud</a></iframe>
+    </div>
+</div>
+</body>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].children[0].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.parentElement.nextElementSibling;
+    if (content.style.display != "none") {
+      content.style.display = "none";
+      this.textContent = "+";
+    } else {
+      content.style.display = "block";
+      this.textContent = "-";
+    }
+  });
+} 
+</script>
+
+</html>
