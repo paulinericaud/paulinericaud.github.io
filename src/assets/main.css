@@ -5,13 +5,19 @@ body {
     color: #f0f0f0;
     text-align: center;
 }
-body > div{
+main > div{
     border: 2px solid darkorchid;
     width: 90%;
     border-radius: 1rem;
     margin: 1rem auto 0;
     padding: 0 1rem ;
 
+}
+header > h1 {
+    margin-bottom: 0.5rem;
+}
+header{
+    margin-bottom: 2rem;
 }
 h1{
     color: darkorchid;
@@ -47,13 +53,7 @@ iframe, video{
     display: block;
     margin: 0.5rem auto 1rem auto;
 }
-video::-webkit-media-controls-volume-slider {
-    display:none;
-}
 
-video::-webkit-media-controls-mute-button {
-display:none;
-}
 .collapsible {
     display: flex;
     cursor: pointer;
@@ -111,13 +111,6 @@ video {
     max-height: 60vh;
 }
 
-.slideShow{
-    position: relative;
-}
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
 /* Next & previous buttons */
 .prev, .next, .fullscreen {
   cursor: pointer;
@@ -163,9 +156,8 @@ video {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
-    position: absolute;
-    bottom: 70px;
-    right: 10px;
+    text-align: end;
+    margin-top: -40px;
 }
 
 .row:after {
@@ -182,11 +174,5 @@ video {
 
 /* Add a transparency effect for thumnbail images */
 .demo {
-  opacity: 0.6;
   width: 100%;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
 }
