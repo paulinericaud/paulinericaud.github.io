@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import '@/assets/projects.css'
 
 const pdlImgArray : string[] = [new URL('@/assets/PDL/Home_disconnected.png', import.meta.url).href,
                               new URL('@/assets/PDL/Register.png', import.meta.url).href,
@@ -49,7 +50,7 @@ watch(pdlIndex,() => {});
             <div class="projectTitle">
                 <h3>Projet NET</h3><span>(Travail d'équipe)</span>
             </div>
-            <div class="columns">
+            <div class="flex-columns">
                 <div>
                     <p>Ceci est un projet créé en deuxième année de licence informatique (L2) avec Nicolas Lespinasse et Arthur Chaminade pour notre UE de Projet Technologique.</p>
 
@@ -72,7 +73,7 @@ watch(pdlIndex,() => {});
             <div class="projectTitle">
                 <h3>Projet de Programmation Orientée Objet</h3><span>(Travail d'équipe)</span>
             </div>
-            <div class="columns">
+            <div class="flex-columns">
                 <div>
                     <p>Ceci est un projet créé en deuxième année de licence informatique (L2) avec Nicolas Lespinasse pour notre UE de Programmation Orientée Objet, enseignée par Mr L. Réveillère.</p>
                     <p>
@@ -94,7 +95,7 @@ watch(pdlIndex,() => {});
             <div class="projectTitle">
                 <h3>Projet de Développement Logiciel</h3><span>(Travail d'équipe)</span>
             </div>
-            <div class="columns">
+            <div class="flex-columns">
                 <div>
                     <p>Ceci est un projet créé en troisième année de licence informatique (L3) avec Nicolas Lespinasse et Adam Naji pour notre UE de Projet de Développement Logiciel.</p>
                     <p>On a dû développer une application de recherche d'image par similarité avec une architecture basée client-serveur et une base de donnée pour indexer les images.</p>
@@ -170,7 +171,7 @@ watch(pdlIndex,() => {});
                 <h3>Develop at Ubisoft</h3>
             </div>
         <p>
-        Develop at Ubisoft est un programme de mentorat pour les étudiant.e.s et récemment diplomé.e.s (moins de deux and d'expérience) cherchant à améliorer leurs compétences en Game Design, Audio, ou Programmation.<br>
+        Develop at Ubisoft est un programme de mentorat pour les étudiant.e.s et récemment diplomé.e.s (moins de deux ans d'expérience) cherchant à améliorer leurs compétences en Game Design, Audio, ou Programmation.<br>
 
         J'ai candidaté à ce programme en 2024-2025 et eu la chance d'être acceptée. Le jeu ci-dessous est mon premier petit jeu, fait avant ma première Game Jam, grâce à l'aide du mentor que j'ai eu à Ubisoft.
         </p>
@@ -183,106 +184,3 @@ watch(pdlIndex,() => {});
 </div>
   </main>
 </template>
-
-
-<style lang="css" scoped>
-video {
-    max-height: 60vh;
-}
-
-/* Next & previous buttons */
-.prev, .next, .fullscreen {
-  cursor: pointer;
-  width: auto;
-  padding: 16px;
-  margin-top: -20px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-
-/* Position the "next button" to the right */
-.next {
-    border-radius: 3px 0 0 3px;
-}
-/* Position the "next button" to the right */
-.prev {
-    border-radius: 3px 0 0 3px;
-}
-/* Container for image text */
-.caption-container {
-    text-align: center;
-    color: white;
-    display: grid;
-    grid-template-columns: 48px auto   48px;
-    margin-top: 15px;
-    width: 100%;
-}
-#caption {
-    width: 100%;
-    margin: 0;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover, .fullscreen:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    text-align: end;
-    margin-top: -40px;
-}
-/* Add a transparency effect for thumnbail images */
-.demo {
-  width: 100%;
-}
-.columns {
-    display: flex;
-    gap: 1rem;
-}
-.columns > :first-child{
-    width: 45%;
-    padding: 1rem;
-}
-
-.columns > :nth-child(2){
-    border-left: 2px solid gray;
-    padding: 1rem;
-    width: 50%;
-}
-
-#netGame {
-    height: 50vh;
-    display: block;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0;
-    max-height: 70vh;
-    min-height: 40vh;
-    margin: 0;
-}
-iframe, video{
-    display: block;
-    margin: 0.5rem auto 1rem auto;
-}
-
-.collapsible {
-    display: flex;
-    cursor: pointer;
-}
-.collapsible > button {
-    background :none;
-    border: none;
-    padding-inline: 1rem;
-    font-size: 32px;
-    color: cornflowerblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-</style>

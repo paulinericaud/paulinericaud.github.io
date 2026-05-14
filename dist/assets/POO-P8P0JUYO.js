@@ -1,1 +1,0 @@
-var e=`/assets/POO-BMDMtyHk.mp4`;export{e as t};

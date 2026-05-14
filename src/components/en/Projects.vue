@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import '@/assets/projects.css'
 
 const pdlImgArray : string[] = [new URL('@/assets/PDL/Home_disconnected.png', import.meta.url).href,
                               new URL('@/assets/PDL/Register.png', import.meta.url).href,
@@ -49,7 +50,7 @@ watch(pdlIndex,() => {});
             <div class="projectTitle">
                 <h3>NET Project</h3><span>(TeamWork)</span>
             </div>
-            <div class="columns">
+            <div class="flex-columns">
                 <div>
                     <p>Project created in 2nd year (L2) of computer science with Nicolas Lespinasse and Arthur Chaminade for our UE Projet Technologique.</p>
 
@@ -72,7 +73,7 @@ watch(pdlIndex,() => {});
             <div class="projectTitle">
                 <h3>Object-Oriented Programming Project</h3><span>(TeamWork)</span>
             </div>
-            <div class="columns">
+            <div class="flex-columns">
                 <div>
                     <p>Project created in 2nd year (L2) of computer science with Nicolas Lespinasse for our UE Object-Oriented Programming, teached by Mr L. Réveillère.</p>
                     <p>
@@ -94,7 +95,7 @@ watch(pdlIndex,() => {});
             <div class="projectTitle">
                 <h3>Software development project</h3><span>(TeamWork)</span>
             </div>
-            <div class="columns">
+            <div class="flex-columns">
                 <div>
                     <p>Project created in 3rd year of computer science with Nicolas Lespinasse and Adam Naji for our UE Software Development Project.</p>
                     <p>We needed to develop an image search application by similarity with a client-server architecture based on a database for the indexing of images.</p>
@@ -141,7 +142,7 @@ watch(pdlIndex,() => {});
                     We decided to create a little game where the player want to break into a museum to steal jewels, concealing their identity with a mask. They have to break the glass containing the jewel thanks to a point-and-click mini-game, then desactivate the cameras in the security room before leaving the building.
                 </p>
 
-                <iframe frameborder="0" src="https://itch.io/embed/4256328?linkback=true&amp;border_width=3&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=8b008b&amp;border_color=9932cc" width="554" height="169">Kasse au musée by DeFeoSimon, Pauline Ricaud, Lilian6447</iframe>
+                <iframe frameborder="0" src="https://itch.io/embed/4256328?linkback=true&amp;border_width=3&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=8b008b&amp;border_color=9932cc" width="560" height="169">Kasse au musée by DeFeoSimon, Pauline Ricaud, Lilian6447</iframe>
             </div>
         </div>
         <div>
@@ -180,106 +181,3 @@ watch(pdlIndex,() => {});
 </div>
   </main>
 </template>
-
-
-<style lang="css" scoped>
-video {
-    max-height: 60vh;
-}
-
-/* Next & previous buttons */
-.prev, .next, .fullscreen {
-  cursor: pointer;
-  width: auto;
-  padding: 16px;
-  margin-top: -20px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-
-/* Position the "next button" to the right */
-.next {
-    border-radius: 3px 0 0 3px;
-}
-/* Position the "next button" to the right */
-.prev {
-    border-radius: 3px 0 0 3px;
-}
-/* Container for image text */
-.caption-container {
-    text-align: center;
-    color: white;
-    display: grid;
-    grid-template-columns: 48px auto   48px;
-    margin-top: 15px;
-    width: 100%;
-}
-#caption {
-    width: 100%;
-    margin: 0;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover, .fullscreen:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    text-align: end;
-    margin-top: -40px;
-}
-/* Add a transparency effect for thumnbail images */
-.demo {
-  width: 100%;
-}
-.columns {
-    display: flex;
-    gap: 1rem;
-}
-.columns > :first-child{
-    width: 45%;
-    padding: 1rem;
-}
-
-.columns > :nth-child(2){
-    border-left: 2px solid gray;
-    padding: 1rem;
-    width: 50%;
-}
-
-#netGame {
-    height: 50vh;
-    display: block;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0;
-    max-height: 70vh;
-    min-height: 40vh;
-    margin: 0;
-}
-iframe, video{
-    display: block;
-    margin: 0.5rem auto 1rem auto;
-}
-
-.collapsible {
-    display: flex;
-    cursor: pointer;
-}
-.collapsible > button {
-    background :none;
-    border: none;
-    padding-inline: 1rem;
-    font-size: 32px;
-    color: cornflowerblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-</style>
