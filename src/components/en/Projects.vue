@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import router from '@/router';
 import { ref, watch } from 'vue'
 
-const pdlImgArray : string[] = [new URL('../assets/PDL/Home_disconnected.png', import.meta.url).href,
-                              new URL('../assets/PDL/Register.png', import.meta.url).href,
-                              new URL('../assets/PDL/Login.png', import.meta.url).href,
-                              new URL('../assets/PDL/Home_connected.png', import.meta.url).href,
-                              new URL('../assets/PDL/Community.png', import.meta.url).href,
-                              new URL('../assets/PDL/Friend.png', import.meta.url).href,
-                              new URL('../assets/PDL/Profile.png', import.meta.url).href,
-                              new URL('../assets/PDL/Img_details.png', import.meta.url).href,
-                              new URL('../assets/PDL/Img_similarities.png', import.meta.url).href,
-                              new URL('../assets/PDL/Settings.png', import.meta.url).href]
+const pdlImgArray : string[] = [new URL('@/assets/PDL/Home_disconnected.png', import.meta.url).href,
+                              new URL('@/assets/PDL/Register.png', import.meta.url).href,
+                              new URL('@/assets/PDL/Login.png', import.meta.url).href,
+                              new URL('@/assets/PDL/Home_connected.png', import.meta.url).href,
+                              new URL('@/assets/PDL/Community.png', import.meta.url).href,
+                              new URL('@/assets/PDL/Friend.png', import.meta.url).href,
+                              new URL('@/assets/PDL/Profile.png', import.meta.url).href,
+                              new URL('@/assets/PDL/Img_details.png', import.meta.url).href,
+                              new URL('@/assets/PDL/Img_similarities.png', import.meta.url).href,
+                              new URL('@/assets/PDL/Settings.png', import.meta.url).href]
 var pdlIndex = ref<number>(0);
 var pdlImg : string = "";
 var pdlImgCaption : string = "";
@@ -39,10 +38,9 @@ watch(pdlIndex,() => {});
 <template>
   <main>
 
-<div>
+<div class="div-border">
     <div class="collapsible" v-on:click="toggleSection(0)">
-        <button>-</button>
-        <h2>Studies : projects</h2>
+        <h2>- Studies</h2>
     </div>
 
     <div class="content" v-if="sectionsVisible[0]">
@@ -64,10 +62,10 @@ watch(pdlIndex,() => {});
                         You can try the original game <a href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/net.html">here</a>.
                     </p>
 
-                    <p>You can try our project <a href="/projects/game.html">here</a> too.</p>
+                    <p>You can try our project <a href="/static/projects/game.html">here</a> too.</p>
                 </div>
 
-                <iframe src="/projects/game_embed.html" id="netGame">Page not found.</iframe>
+                <iframe src="/static/projects/game_embed.html" id="netGame">Page not found.</iframe>
             </div>
         </div>
         <div>
@@ -87,7 +85,7 @@ watch(pdlIndex,() => {});
                 </div>
 
                 <video width="55vh" controls autoplay muted>
-                    <source src="../assets/POO.mp4" type="video/mp4">
+                    <source src="@/assets/POO.mp4" type="video/mp4">
                     Video Not Found.
                 </video>
             </div>
@@ -127,10 +125,9 @@ watch(pdlIndex,() => {});
     </div>
 </div>
 
-<div>
+<div class="div-border">
     <div class="collapsible" v-on:click="toggleSection(1)">
-        <button onclick="">-</button>
-        <h2>Game Jam</h2>
+        <h2>- Game Jam</h2>
     </div>
     <div class="content" v-if="sectionsVisible[1]">
         <hr>
@@ -144,7 +141,7 @@ watch(pdlIndex,() => {});
                     We decided to create a little game where the player want to break into a museum to steal jewels, concealing their identity with a mask. They have to break the glass containing the jewel thanks to a point-and-click mini-game, then desactivate the cameras in the security room before leaving the building.
                 </p>
 
-                <iframe frameborder="0" src="https://itch.io/embed/4256328?linkback=true&amp;border_width=3&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=8b008b&amp;border_color=9932cc" width="554" height="169">Kasse au musée by DeFeoSimon,, Pauline Ricaud, Lilian6447</iframe>
+                <iframe frameborder="0" src="https://itch.io/embed/4256328?linkback=true&amp;border_width=3&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=8b008b&amp;border_color=9932cc" width="554" height="169">Kasse au musée by DeFeoSimon, Pauline Ricaud, Lilian6447</iframe>
             </div>
         </div>
         <div>
@@ -152,19 +149,18 @@ watch(pdlIndex,() => {});
                 <h3>Code Game Jam 2026</h3><span>(TeamWork)</span>
             </div>
             <div>
-                <p>The theme for the Global Game Jam's 2026 edition : <b>Fête des clics !</b></p>
+                <p>The theme for the Code Game Jam's 2026 edition : <b>Fête des clics !</b></p>
 
-                <p>The theme giving us a little space for inspiration, we decided to set our game in the context of a party, where one of the game available, the one we coded, was to put a nail in a log. The player has to click only when the cursor is at the right place, then click enough times so the nail goes into the log.</p>
+                <p>The theme giving us a little space for inspiration, we decided to set our game in the context of a party, where one of the game available, the one we coded, was to put a nail in a log. First, the player has to click only when the cursor is at the right place to place the hammer, then they have to click enough times so the hammer has enough strength to drive the nail into the log.</p>
 
                 <iframe frameborder="0" src="https://itch.io/embed/4224134?linkback=true&amp;border_width=3&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=8b008b&amp;border_color=9932cc" width="560" height="175">Faut Bûcher ! by Pauline Ricaud, Lilian6447, cplcoincoin, DeFeoSimon</iframe>
             </div>
         </div>
     </div>
 </div>
-<div>
+<div class="div-border">
     <div class="collapsible" v-on:click="toggleSection(2)">
-        <button onclick="">-</button>
-        <h2>Mentoring</h2>
+        <h2>- Mentoring</h2>
     </div>
     <div class="content" v-if="sectionsVisible[2]">
         <hr>
@@ -176,7 +172,7 @@ watch(pdlIndex,() => {});
 
         I applied to this program for the 2024-2025 program and was accepted. The game below was my first little game, done before any Game Jam, thanks to the help of my Ubisoft's mentor.<br>
         <br>
-        I prioritized the process of learning how to program things over the finished product, so the game design lacks and it's not playable in this state, but I will resume the programming of this game to enhance it later.
+        I prioritized the process of learning how to program things over the finished product, so the game design lacks and it's not playable in this state. However, I will resume the programming of this game and enhance it later, to show off the programming skills I learned thanks to this mentorship.
         </p>
 
         <iframe frameborder="0" src="https://itch.io/embed/3251520?linkback=true&amp;border_width=3&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=8b008b&amp;border_color=9932cc" width="560" height="175">*Lethal Exposure by Pauline Ricaud</iframe>
@@ -184,3 +180,106 @@ watch(pdlIndex,() => {});
 </div>
   </main>
 </template>
+
+
+<style lang="css" scoped>
+video {
+    max-height: 60vh;
+}
+
+/* Next & previous buttons */
+.prev, .next, .fullscreen {
+  cursor: pointer;
+  width: auto;
+  padding: 16px;
+  margin-top: -20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+    border-radius: 3px 0 0 3px;
+}
+/* Position the "next button" to the right */
+.prev {
+    border-radius: 3px 0 0 3px;
+}
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-template-columns: 48px auto   48px;
+    margin-top: 15px;
+    width: 100%;
+}
+#caption {
+    width: 100%;
+    margin: 0;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover, .fullscreen:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    text-align: end;
+    margin-top: -40px;
+}
+/* Add a transparency effect for thumnbail images */
+.demo {
+  width: 100%;
+}
+.columns {
+    display: flex;
+    gap: 1rem;
+}
+.columns > :first-child{
+    width: 45%;
+    padding: 1rem;
+}
+
+.columns > :nth-child(2){
+    border-left: 2px solid gray;
+    padding: 1rem;
+    width: 50%;
+}
+
+#netGame {
+    height: 50vh;
+    display: block;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    max-height: 70vh;
+    min-height: 40vh;
+    margin: 0;
+}
+iframe, video{
+    display: block;
+    margin: 0.5rem auto 1rem auto;
+}
+
+.collapsible {
+    display: flex;
+    cursor: pointer;
+}
+.collapsible > button {
+    background :none;
+    border: none;
+    padding-inline: 1rem;
+    font-size: 32px;
+    color: cornflowerblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>

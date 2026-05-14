@@ -71,7 +71,6 @@ function canvasRightClick(event) {
 }
 
 function start() {
-    console.log("start");
     newgame();
 }
 
@@ -148,7 +147,6 @@ function newgame(){
     }
     canvas.width = size * cols;
     canvas.height = size * rows;
-    console.log(size);
     drawCanvas();
 }
 
@@ -192,7 +190,6 @@ function newgamecustom(){
     if(size < 50){
         size = 50;
     }
-    console.log(size);
     g = Module._new_random(rows,cols,wrapping,empty,extra);
     Module._restart(g);
     canvas.width = size * cols;

@@ -1,23 +1,9 @@
 body {
-    margin: 0 0 1rem 0;
+    top: 0;
     font-family: sans-serif;
     background-color: #1e1e1e;
     color: #f0f0f0;
     text-align: center;
-}
-main > div{
-    border: 2px solid darkorchid;
-    width: 90%;
-    border-radius: 1rem;
-    margin: 1rem auto 0;
-    padding: 0 1rem ;
-
-}
-header > h1 {
-    margin-bottom: 0.5rem;
-}
-header{
-    margin-bottom: 2rem;
 }
 h1{
     color: darkorchid;
@@ -39,41 +25,25 @@ a {
 a:hover {
     color: darkmagenta;
 }
-#netGame {
-    height: 50vh;
-    display: block;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0;
-    max-height: 70vh;
-    min-height: 40vh;
-    margin: 0;
+
+button{
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: darkmagenta;
+  border: 4px solid slateblue;
+  color: white;
+  cursor: pointer;
 }
-iframe, video{
-    display: block;
-    margin: 0.5rem auto 1rem auto;
+button:hover{
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #c200c2;
+  border: 4px solid cornflowerblue;
+  text-decoration: underline;
 }
 
-.collapsible {
-    display: flex;
-    cursor: pointer;
-}
-.collapsible > button {
-    background :none;
-    border: none;
-    padding-inline: 1rem;
-    font-size: 32px;
-    color: cornflowerblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.content {
-    display: block;
-    text-align: left;
-    padding-inline: 1rem;
-    margin-bottom: 1rem;
-}
 hr{
     color: darkorchid;
 }
@@ -91,88 +61,18 @@ hr{
     margin-bottom: 16px;
     margin-left: 0.5rem;
 }
-.columns {
-    display: flex;
-    gap: 1rem;
-}
-.columns > :first-child{
-    width: 45%;
-    padding: 1rem;
+
+.content {
+    text-align: left;
+    padding-inline: 1rem;
+    margin-bottom: 1rem;
 }
 
-.columns > :nth-child(2){
-    border-left: 2px solid gray;
-    padding: 1rem;
-    width: 50%;
-}
-
-
-video {
-    max-height: 60vh;
-}
-
-/* Next & previous buttons */
-.prev, .next, .fullscreen {
-  cursor: pointer;
-  width: auto;
-  padding: 16px;
-  margin-top: -20px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-
-/* Position the "next button" to the right */
-.next {
-    border-radius: 3px 0 0 3px;
-}
-/* Position the "next button" to the right */
-.prev {
-    border-radius: 3px 0 0 3px;
-}
-/* Container for image text */
-.caption-container {
-    text-align: center;
-    color: white;
-    display: grid;
-    grid-template-columns: 48px auto   48px;
-    margin-top: 15px;
-    width: 100%;
-}
-#caption {
-    width: 100%;
-    margin: 0;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover, .fullscreen:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    text-align: end;
-    margin-top: -40px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Six columns side by side */
-.column {
-    float: left;
-    width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  width: 100%;
+.div-border {
+    border: 2px solid darkorchid;
+    width: 90%;
+    border-radius: 1rem;
+    margin: 0 auto 1rem;
+    padding: 0 1rem;
+    height: fit-content;
 }

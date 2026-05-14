@@ -54,29 +54,26 @@ input[type="button"]:hover {
     text-decoration: underline;
 }
 
+
 button{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     font-size: 1rem;
-    border: none;
     border-radius: 8px;
-    background-color: #8b008b;
+    background-color: darkmagenta;
+    border: 4px solid slateblue;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
-
-
 button:hover{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     font-size: 1rem;
-    border: none;
     border-radius: 8px;
-    background-color: #520052;
+    background-color: #c200c2;
+    border: 4px solid cornflowerblue;
     text-decoration: underline;
+}
+nav {
+    position: absolute;
+    top: 0.8rem;
+    left: 2rem;
 }
