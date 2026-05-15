@@ -47,20 +47,6 @@ button:hover{
 hr{
     color: darkorchid;
 }
-.projectTitle{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.projectTitle span {
-    color:lightskyblue;
-    font-size: 12px;
-    text-decoration: none;
-    align-self: end;
-    margin-bottom: 16px;
-    margin-left: 0.5rem;
-}
 
 .content {
     text-align: left;

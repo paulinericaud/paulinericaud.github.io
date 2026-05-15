@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import router from '@/router';
+import '@/assets/profile.css'
 </script>
 
 <template>
   <main>
-    <div class="profileColumns">
+    <div class="grid-columns">
         <div class="content" style="grid-row: span 2;">
             <p>Je suis une étudiante actuellement en train de finir sa troisième année d'informatique à l'Université de Bordeaux</p>
             <h2>Études</h2>
@@ -36,31 +37,3 @@ import router from '@/router';
     </div>
   </main>
 </template>
-
-
-<style lang="css" scoped>
-.profileColumns {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: calc(100% - 27rem) 26rem;
-    gap: 1rem;
-    margin-inline: 2% 3%;
-}
-.profileColumns > .div-border {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-dl{
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-dt{
-    text-align: right;
-}
-dd {
-    text-align: left;
-    margin-left: 1rem;
-}
-</style>
