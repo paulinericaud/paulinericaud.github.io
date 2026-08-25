@@ -42,7 +42,6 @@ watch(pdlIndex,() => {});
 <div class="div-border">
     <div class="collapsible" v-on:click="toggleSection(0)">
         <h2>- Études</h2>
-        <h2>- Études hehe</h2>
     </div>
 
     <div class="content" v-if="sectionsVisible[0]">
@@ -111,7 +110,7 @@ watch(pdlIndex,() => {});
                   <!-- Full-width images with number text -->
                   <div class="mySlides">
                       <img :src="pdlImg" class="demo" :alt="pdlImg.slice(0,-4)">
-                      <div class="numbertext">{{ pdlIndex }} / {{ pdlImgArray.length }}</div>
+                      <div class="numbertext">{{ pdlIndex +1}} / {{ pdlImgArray.length }}</div>
                   </div>
 
                   <!-- Next and previous buttons -->
