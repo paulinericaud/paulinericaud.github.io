@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
 
   ],
-  base: "/",
+  base: "https://paulinericaud.github.io/",
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
