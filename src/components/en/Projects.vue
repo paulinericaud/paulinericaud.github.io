@@ -17,7 +17,7 @@ var pdlImg : string = "";
 var pdlImgCaption : string = "";
 function changePdlImg(idx : number){
   if (idx == 1) pdlIndex.value = (pdlIndex.value+1)%pdlImgArray.length;
-  else if (idx == -1) pdlIndex.value = (pdlIndex.value-1)%pdlImgArray.length;
+  else if (idx == -1) pdlIndex.value = (pdlIndex.value-1+pdlImgArray.length)%pdlImgArray.length;
   else pdlIndex.value = 0;
 
   pdlImg = pdlImgArray[pdlIndex.value] || "";
@@ -110,7 +110,7 @@ watch(pdlIndex,() => {});
                   <!-- Full-width images with number text -->
                   <div class="mySlides">
                       <img :src="pdlImg" class="demo" :alt="pdlImg.slice(0,-4)">
-                      <div class="numbertext">{{ pdlIndex }} / {{ pdlImgArray.length }}</div>
+                      <div class="numbertext">{{ pdlIndex +1}} / {{ pdlImgArray.length }}</div>
                   </div>
 
                   <!-- Next and previous buttons -->
