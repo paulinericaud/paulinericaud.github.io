@@ -17,7 +17,7 @@ var pdlImg : string = "";
 var pdlImgCaption : string = "";
 function changePdlImg(idx : number){
   if (idx == 1) pdlIndex.value = (pdlIndex.value+1)%pdlImgArray.length;
-  else if (idx == -1) pdlIndex.value = (pdlIndex.value-1)%pdlImgArray.length;
+  else if (idx == -1) pdlIndex.value = (pdlIndex.value-1+pdlImgArray.length)%pdlImgArray.length;
   else pdlIndex.value = 0;
 
   pdlImg = pdlImgArray[pdlIndex.value] || "";
@@ -42,6 +42,7 @@ watch(pdlIndex,() => {});
 <div class="div-border">
     <div class="collapsible" v-on:click="toggleSection(0)">
         <h2>- Études</h2>
+        <h2>- Études hehe</h2>
     </div>
 
     <div class="content" v-if="sectionsVisible[0]">
